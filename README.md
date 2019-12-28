@@ -1,4 +1,4 @@
-# Acoustic-localization-device
+# Acoustic-localization
 A device that can locate a sound source of a particular frequency in 2-D space.
 
 This project is built based on a TM4C123 microcontroller with an ARM cortex-M processor.
