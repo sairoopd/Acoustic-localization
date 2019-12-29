@@ -24,14 +24,7 @@
 #define ADC_SAMPLE_BUF_SIZE     1024
 unsigned int samplingFrequency=48000;
 
-
-// -------------------------------------------------------------------
- // Declare State buffer of size (numTaps + blockSize - 1)
- // ------------------------------------------------------------------
-
-/// ------------------------------------------------------------------
-///  Global variables for FIR LPF Example
-///  -------------------------------------------------------------------
+/***********************/
 
 uint32_t blockSize = ADC_SAMPLE_BUF_SIZE/2;
 
@@ -127,9 +120,6 @@ void ADCseq0Handler()
 
 int main(void)
 {
-//    int debugFlag=0;
-
-
     uint32_t i, samples_taken;
     uint32_t RMS1, RMS2;
 
@@ -306,7 +296,6 @@ void init_ADC01()
 
     IntDisable(INT_ADC0SS0);
     ADCIntDisable(ADC0_BASE, 0u);
-		//ADCHardwareOversampleConfigure(ADC0_BASE, 8);
     ADCSequenceDisable(ADC0_BASE,0u);
     // With sequence disabled, it is now safe to load the new configuration parameters
 
